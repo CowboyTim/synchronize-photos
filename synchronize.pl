@@ -56,6 +56,8 @@ my $photo_regex       = qr/\.(JPG|CRW|THM)$/i;
 my $help              = 0;
 my $man               = 0;
 GetOptions ("sourcedir=s" => \$src_dir,
+            "targetdir=s" => \$target_dir,
+            "targetfmt=s" => \$target_dir_format,
             "help|?!"     => \$help,
             "man!"        => \$man)
     or pod2usage(-verbose => 1);
@@ -239,6 +241,17 @@ Prints the manual page and exits.
 
 The base source directory where the photos are to be found. This is usually on
 a compact flash card that is mounted.
+
+=item B<--targetdir F<E<lt>target directoryE<gt>>>
+
+The target directory where the fotos will be copied to. In this dir, subdirs
+are made by date, in the format specified by the --targetfmt option. Default
+this is ~/fotos if it exists.
+
+=item B<--targetfmt F<E<lt>target sub directory formatE<gt>>>
+
+This is the target directory's foto subdir format where the fotos are to be
+copied to. Default, this is YYYY_MM_DD.
 
 =back
 
