@@ -52,7 +52,7 @@ use Gtk2::GladeXML;
 my $src_dir           = '/media/usbdisk';
 my $target_dir_format = '%Y_%m_%d';
 my $target_dir        = (glob('~/fotos'))[0];
-my $photo_regex       = qr/\.(JPG|CRW|THM|CR2)$/i;
+my $photo_regex       = qr/\.(JPG|CRW|THM|CR2|MOV)$/i;
 my $help              = 0;
 my $man               = 0;
 GetOptions ("sourcedir=s" => \$src_dir,
